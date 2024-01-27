@@ -1,0 +1,73 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Code Challenge API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/countries": {
+            "get": {
+                "summary": "Get a list of countries",
+                "parameters": [
+                    {
+                        "name": "region",
+                        "in": "query",
+                        "description": "Filter countries by region",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "example": [
+                                    {
+                                        "name": "Turkey",
+                                        "region": "EMEA"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/salesrep": {
+            "get": {
+                "summary": "Analyze regions and determine sales representative requirements",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "message": "Salesrep endpoint executed successfully"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/optimal": {
+            "get": {
+                "summary": "Distribute countries to sales representatives optimally",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "message": "Optimal endpoint executed successfully"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
