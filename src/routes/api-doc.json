@@ -4,6 +4,12 @@
         "title": "Code Challenge API",
         "version": "1.0.0"
     },
+    "servers": [
+        {
+            "url": "http://localhost:3000/api",
+            "description": "Local development server"
+        }
+    ],
     "paths": {
         "/countries": {
             "get": {

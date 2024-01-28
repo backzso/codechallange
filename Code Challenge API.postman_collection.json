@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "726c2b38-6ba9-4f13-99ed-577f9ebd6424",
+		"name": "Code Challenge API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17782865"
+	},
+	"item": [
+		{
+			"name": "countries",
+			"item": [
+				{
+					"name": "Get a list of countries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/countries?region=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"countries"
+							],
+							"query": [
+								{
+									"key": "region",
+									"value": "<string>",
+									"description": "Filter countries by region"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/countries?region=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"countries"
+									],
+									"query": [
+										{
+											"key": "region",
+											"value": "<string>",
+											"description": "Filter countries by region"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"example\": [\n    {\n      \"name\": \"Turkey\",\n      \"region\": \"EMEA\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "salesrep",
+			"item": [
+				{
+					"name": "Analyze regions and determine sales representative requirements",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/salesrep",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"salesrep"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/salesrep",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"salesrep"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"example\": {\n    \"message\": \"Sales representative analysis completed successfully for the specified regions\"\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "optimal",
+			"item": [
+				{
+					"name": "Distribute countries to sales representatives optimally",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/optimal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"optimal"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/optimal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"optimal"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"example\": {\n    \"message\": \"Optimal distribution of countries to sales representatives completed successfully\",\n    \"roster\": [\n      {\n        \"region\": \"EMEA\",\n        \"countryList\": [\n          \"Turkey\",\n          \"France\",\n          \"Italy\"\n        ],\n        \"countryCount\": 3\n      },\n      {\n        \"region\": \"APAC\",\n        \"countryList\": [\n          \"Japan\",\n          \"China\",\n          \"Australia\"\n        ],\n        \"countryCount\": 3\n      }\n    ]\n  }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000/api"
+		}
+	]
+}
