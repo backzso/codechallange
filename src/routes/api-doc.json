@@ -7,6 +7,7 @@
     "paths": {
         "/countries": {
             "get": {
+                "operationId": "getCountries",
                 "summary": "Get a list of countries",
                 "parameters": [
                     {
@@ -37,6 +38,7 @@
         },
         "/salesrep": {
             "get": {
+                "operationId": "analyzeSalesRep",
                 "summary": "Analyze regions and determine sales representative requirements",
                 "responses": {
                     "200": {
@@ -44,7 +46,7 @@
                         "content": {
                             "application/json": {
                                 "example": {
-                                    "message": "Salesrep endpoint executed successfully"
+                                    "message": "Sales representative analysis completed successfully for the specified regions"
                                 }
                             }
                         }
@@ -54,6 +56,7 @@
         },
         "/optimal": {
             "get": {
+                "operationId": "distributeOptimally",
                 "summary": "Distribute countries to sales representatives optimally",
                 "responses": {
                     "200": {
@@ -61,7 +64,27 @@
                         "content": {
                             "application/json": {
                                 "example": {
-                                    "message": "Optimal endpoint executed successfully"
+                                    "message": "Optimal distribution of countries to sales representatives completed successfully",
+                                    "roster": [
+                                        {
+                                            "region": "EMEA",
+                                            "countryList": [
+                                                "Turkey",
+                                                "France",
+                                                "Italy"
+                                            ],
+                                            "countryCount": 3
+                                        },
+                                        {
+                                            "region": "APAC",
+                                            "countryList": [
+                                                "Japan",
+                                                "China",
+                                                "Australia"
+                                            ],
+                                            "countryCount": 3
+                                        }
+                                    ]
                                 }
                             }
                         }
